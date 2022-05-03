@@ -13,16 +13,15 @@ import com.example.filmster.databinding.ActivitySplashScreenBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 
-@SuppressLint("CustomSplashScreen")
+
 @AndroidEntryPoint
 class SplashScreenActivity : AppCompatActivity() {
-    private lateinit var binding: ActivitySplashScreenBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySplashScreenBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
+        setContentView(R.layout.activity_splash_screen)
+            supportActionBar?.hide()
 //        binding.splashScreenImg.alpha = 0f
 //        binding.splashScreenImg.animate().setDuration(1500).alpha(1f).withEndAction() {
 //        val i = Intent(this@SplashScreenActivity, MainActivity::class.java)
