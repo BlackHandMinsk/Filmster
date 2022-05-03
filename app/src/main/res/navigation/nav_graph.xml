@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreenActivity">
+
+    <activity
+        android:id="@+id/splashScreenActivity"
+        android:name="com.example.filmster.SplashScreenActivity"
+        android:label="activity_splash_screen"
+        tools:layout="@layout/activity_splash_screen" />
+    <fragment
+        android:id="@+id/filmsFragment"
+        android:name="com.example.filmster.FilmsFragment"
+        android:label="fragment_films"
+        tools:layout="@layout/fragment_films" />
+    <fragment
+        android:id="@+id/filmsInfoFragment"
+        android:name="com.example.filmster.FilmsInfoFragment"
+        android:label="fragment_films_info"
+        tools:layout="@layout/fragment_films_info" />
+</navigation>
