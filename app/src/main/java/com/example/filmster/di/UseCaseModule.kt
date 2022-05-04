@@ -1,6 +1,6 @@
 package com.example.filmster.di
 
-import com.example.filmster.domain.GetRemoteListFilmsUseCase
+import com.example.filmster.domain.usecases.GetRemoteListFilmsUseCase
 import com.example.filmster.domain.repository.FilmRepository
 import dagger.Module
 import dagger.Provides

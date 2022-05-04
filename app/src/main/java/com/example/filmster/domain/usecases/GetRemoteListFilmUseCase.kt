@@ -1,4 +1,4 @@
-package com.example.filmster.domain
+package com.example.filmster.domain.usecases
 
 import com.example.filmster.domain.repository.FilmRepository
 

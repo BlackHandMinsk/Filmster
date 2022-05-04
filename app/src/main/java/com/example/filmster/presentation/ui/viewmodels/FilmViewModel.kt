@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
-import com.example.filmster.domain.GetRemoteListFilmsUseCase
+import com.example.filmster.domain.usecases.GetRemoteListFilmsUseCase
 import com.example.filmster.model.FilmInfo
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted

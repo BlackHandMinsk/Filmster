@@ -33,7 +33,7 @@ class FilmAdapter @Inject constructor(
     private object CharactersDiffCallback : DiffUtil.ItemCallback<FilmInfo>() {
 
         override fun areItemsTheSame(oldItem: FilmInfo, newItem: FilmInfo): Boolean {
-            return oldItem.summary_short == newItem.summary_short
+            return oldItem == newItem
         }
 
         override fun areContentsTheSame(oldItem: FilmInfo, newItem: FilmInfo): Boolean {
@@ -45,7 +45,7 @@ class FilmAdapter @Inject constructor(
         private val binding: ItemFilmBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(filmInfo: FilmInfo) {
-            val image = filmInfo.multimedia?.src
+            val image = filmInfo.multimedia
 
             glide.load(image)
                 .fitCenter()
@@ -58,13 +58,13 @@ class FilmAdapter @Inject constructor(
                     tvSummaryShort.text = info.summary_short
                 }
             }
-            //initButtonsListeners(filmInfo)
+            initButtonsListeners(filmInfo)
         }
 
-//        private fun initButtonsListeners(filmInfo: FilmInfo?) {
-//            binding.cardItem.setOnClickListener {
-//                characterInfo?.let { characterInfo -> listener?.onClickItem(characterInfo) }
-//            }
-//        }
+        private fun initButtonsListeners(filmInfo: FilmInfo?) {
+            binding.filmItem.setOnClickListener {
+                filmInfo?.let { characterInfo -> listener?.onClickItem(characterInfo) }
+            }
+        }
     }
 }

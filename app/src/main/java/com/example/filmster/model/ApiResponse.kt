@@ -1,14 +1,16 @@
 package com.example.filmster.model
 
+import android.os.Parcelable
 import com.example.filmster.data.remote.pojo.FilmPojo
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
+import kotlinx.parcelize.Parcelize
 
-@JsonClass(generateAdapter = true)
+@Parcelize
 data class ApiResponse(
-    @Json(name="copyright") val copyright: String,
-    @Json(name="has_more") val has_more: Boolean,
-    @Json(name="num_results")val num_results: Int,
-    @Json(name="results")val results: List<FilmPojo>,
-    @Json(name="status")val status: String
-)
+    val copyright: String = "",
+    val has_more: Boolean = false,
+    val num_results: Int = 0,
+    val results: List<FilmInfo> = emptyList(),
+    val status: String
+):Parcelable

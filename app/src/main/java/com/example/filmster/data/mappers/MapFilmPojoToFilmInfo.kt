@@ -12,9 +12,9 @@ class MapFilmPojoToFilmInfo : Mapper<FilmPojo, FilmInfo> {
             date_updated = from.date_updated,
             display_title = from.display_title,
             headline = from.headline,
-            link = from.link,
+            link = from.link.url,
             mpaa_rating = from.mpaa_rating,
-            multimedia = from.multimedia,
+            multimedia = from.multimedia.src,
             opening_date = from.opening_date,
             publication_date = from.publication_date,
             summary_short=from.summary_short
