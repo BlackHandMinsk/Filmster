@@ -17,7 +17,6 @@ data class FilmEntity(
     val link: String,
     val mpaa_rating: String,
     val multimedia: String,
-    val opening_date: String,
     val publication_date: String,
     val summary_short: String,
     @ColumnInfo(name = "prev_key") var prevKey: Int?,

@@ -18,4 +18,4 @@ data class FilmInfo(
     val opening_date: String = "",
     val publication_date: String = "",
     val summary_short: String = ""
-): Parcelable
+):Parcelable

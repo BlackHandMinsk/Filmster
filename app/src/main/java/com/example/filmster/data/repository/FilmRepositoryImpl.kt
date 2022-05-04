@@ -19,7 +19,7 @@ import kotlinx.coroutines.flow.map
 import retrofit2.HttpException
 import java.io.IOException
 
-private const val STARTING_PAGE_SIZE = 20
+private const val STARTING_PAGE_SIZE = 60
 
 class FilmRepositoryImpl(
     private val service: FilmApiService,

@@ -73,8 +73,8 @@ class FilmsFragment : Fragment(), AdaptersListener {
                     loadState.refresh is LoadState.NotLoading && filmAdapter.itemCount == 0
 
                 binding.rvFilms.isVisible = !isListEmpty
-//                binding.tvErrorMessage.isVisible = filmAdapter.itemCount == 0
-//                binding.progressBar.isVisible = loadState.source.refresh is LoadState.Loading
+                binding.tvErrorMessage.isVisible = filmAdapter.itemCount == 0
+                binding.progressBar.isVisible = loadState.source.refresh is LoadState.Loading
                 val errorState = loadState.source.append as? LoadState.Error
                     ?: loadState.source.prepend as? LoadState.Error
                     ?: loadState.append as? LoadState.Error

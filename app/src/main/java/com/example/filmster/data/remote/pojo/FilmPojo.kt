@@ -18,7 +18,6 @@ data class FilmPojo(
     @Json(name="link")val link: LinkPojo,
     @Json(name="mpaa_rating")val mpaa_rating: String,
     @Json(name="multimedia")val multimedia: MultimediaPojo,
-    @Json(name="opening_date")val opening_date: String,
     @Json(name="publication_date")val publication_date: String,
     @Json(name="summary_short")val summary_short: String
 )
