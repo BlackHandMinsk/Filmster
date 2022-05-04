@@ -6,9 +6,8 @@ import com.squareup.moshi.JsonClass
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class Multimedia(
-     val height: Int = 0,
-     val src: String = "",
-    val type: String = "",
-    val width: Int = 0
+data class Link(
+  val suggested_link_text: String = "",
+  val type: String = "",
+  val url: String = ""
 ):Parcelable

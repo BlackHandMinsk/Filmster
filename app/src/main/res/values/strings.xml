@@ -2,4 +2,7 @@
     <string name="app_name">Filmster</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="message_internet_connecton_error">😨 Wooops No internet connection</string>
+    <string name="message_http_error">n unexpected error occurred</string>
 </resources>
