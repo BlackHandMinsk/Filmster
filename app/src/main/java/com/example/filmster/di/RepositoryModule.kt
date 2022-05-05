@@ -26,7 +26,7 @@ object RepositoryModule {
         return FilmRepositoryImpl(
             service = apiService,
             mapFilmPojoToFilmInfo = mapFilmPojoToFilmInfo,
-            context=context
+            context = context
         )
     }
 }

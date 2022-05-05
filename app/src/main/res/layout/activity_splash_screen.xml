@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/splashScreenColor"
     tools:context=".presentation.SplashScreenActivity">
 
 
@@ -15,17 +16,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/splash_screen_image_cont_descr"
         app:srcCompat="@drawable/splash_screen_logo" />
 
     <TextView
         android:id="@+id/splash_screen_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Filmster"
-        android:textSize="50sp"
+        android:fontFamily="@font/yesteryear"
         android:gravity="center"
+        android:text="@string/splash_screen_text"
+        android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/splash_screen_img" />
+        app:layout_constraintTop_toBottomOf="@+id/splash_screen_img"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

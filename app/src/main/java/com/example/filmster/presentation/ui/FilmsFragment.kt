@@ -10,13 +10,16 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.Navigation.findNavController
+import androidx.navigation.fragment.DialogFragmentNavigator
+import androidx.navigation.fragment.FragmentNavigator
+import androidx.navigation.fragment.findNavController
 
-import androidx.paging.ExperimentalPagingApi
+
 import androidx.paging.LoadState
 import com.example.filmster.R
 import com.example.filmster.databinding.FragmentFilmsBinding
-import com.example.filmster.model.FilmInfo
-import com.example.filmster.presentation.ui.adapters.AdaptersListener
+
+
 import com.example.filmster.presentation.ui.adapters.FilmAdapter
 import com.example.filmster.presentation.ui.adapters.FilmLoaderStateAdapter
 import com.example.filmster.presentation.ui.viewmodels.FilmViewModel
@@ -29,7 +32,7 @@ import javax.inject.Inject
 
 
 @AndroidEntryPoint
-class FilmsFragment : Fragment(), AdaptersListener {
+class FilmsFragment : Fragment() {
     private var _binding: FragmentFilmsBinding? = null
     private val binding get() = _binding!!
 
@@ -48,7 +51,6 @@ class FilmsFragment : Fragment(), AdaptersListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        filmAdapter.setOnClickListener(this)
 
         with(binding) {
             rvFilms.adapter = filmAdapter.withLoadStateFooter(
@@ -94,23 +96,4 @@ class FilmsFragment : Fragment(), AdaptersListener {
         super.onDestroyView()
         _binding = null
     }
-
-    override fun onClickItem(characterInfo: FilmInfo) {
-        TODO("Not yet implemented")
-    }
-
-//    override fun onClickItem(filmInfo: FilmInfo) {
-//        val controller = findNavController()
-//        val currentDestination =
-//            (controller.currentDestination as? FragmentNavigator.Destination)?.className
-//                ?: (controller.currentDestination as? DialogFragmentNavigator.Destination)?.className
-//        if (currentDestination == this.javaClass.name) {
-//            controller.navigate(
-//                CharactersFragmentDirections.actionCharactersFragmentToCharacterInfoFragment(
-//                    characterInfo
-//                )
-//            )
-//        }
-//    }
-
 }

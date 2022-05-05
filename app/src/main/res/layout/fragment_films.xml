@@ -20,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:spanCount="1"
+                app:spanCount="2"
                 tools:listitem="@layout/item_film" />
 
             <TextView
@@ -28,11 +28,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Error"
+                android:text="@string/error_msg"
                 android:textAlignment="center"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:visibility="gone"/>
+                android:visibility="invisible"/>
 
             <ProgressBar
                 android:id="@+id/progress_bar"
@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:indeterminate="false"
-                android:visibility="gone" />
+                android:visibility="invisible" />
 
 
         </FrameLayout>

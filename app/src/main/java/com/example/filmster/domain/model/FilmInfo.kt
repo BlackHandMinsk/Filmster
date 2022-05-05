@@ -1,9 +1,7 @@
-package com.example.filmster.model
+package com.example.filmster.domain.model
 
 import android.os.Parcelable
-import com.squareup.moshi.Json
 import kotlinx.parcelize.Parcelize
-import kotlinx.parcelize.RawValue
 
 @Parcelize
 data class FilmInfo(

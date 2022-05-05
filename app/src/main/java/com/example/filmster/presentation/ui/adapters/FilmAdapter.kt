@@ -6,19 +6,13 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.RequestManager
-
 import com.example.filmster.databinding.ItemFilmBinding
-import com.example.filmster.model.FilmInfo
+import com.example.filmster.domain.model.FilmInfo
 import javax.inject.Inject
 
 class FilmAdapter @Inject constructor(
     private val glide: RequestManager
 ) : PagingDataAdapter<FilmInfo, FilmAdapter.FilmViewHolder>(CharactersDiffCallback) {
-    private var listener: AdaptersListener? = null
-
-    fun setOnClickListener(onClickListener: AdaptersListener) {
-        this.listener = onClickListener
-    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FilmViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -53,18 +47,13 @@ class FilmAdapter @Inject constructor(
 
             binding.apply {
                 filmInfo.let { info ->
-                    tvHeadline.text = info.headline
                     tvDisplayTittle.text = info.display_title
-                    tvSummaryShort.text = info.summary_short
+                    tvOpeningDate.text = info.opening_date
+                    tvMpaaRating.text = info.mpaa_rating
+                    tvHeadLine.text = info.summary_short
                 }
             }
-            initButtonsListeners(filmInfo)
-        }
 
-        private fun initButtonsListeners(filmInfo: FilmInfo?) {
-            binding.filmItem.setOnClickListener {
-                filmInfo?.let { characterInfo -> listener?.onClickItem(characterInfo) }
-            }
         }
     }
 }

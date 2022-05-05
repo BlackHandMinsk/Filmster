@@ -14,10 +14,6 @@
         android:id="@+id/filmsFragment"
         android:name="com.example.filmster.presentation.ui.FilmsFragment"
         android:label="fragment_films"
-        tools:layout="@layout/fragment_films" />
-    <fragment
-        android:id="@+id/filmsInfoFragment"
-        android:name="com.example.filmster.presentation.ui.FilmsInfoFragment"
-        android:label="fragment_films_info"
-        tools:layout="@layout/fragment_films_info" />
+        tools:layout="@layout/fragment_films" >
+    </fragment>
 </navigation>

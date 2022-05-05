@@ -5,4 +5,13 @@
 
     <string name="message_internet_connecton_error">😨 Wooops No internet connection</string>
     <string name="message_http_error">n unexpected error occurred</string>
+    <string name="error_msg">Loading</string>
+    <string name="splash_screen_text">Filmster</string>
+    <string name="retry_btn_text">Retry</string>
+    <string name="item_loader_error_text">Error</string>
+    <string name="headline_txt">Headline</string>
+    <string name="mpaa_text">MPAA</string>
+    <string name="date_txt">date</string>
+    <string name="title_txt">title</string>
+    <string name="splash_screen_image_cont_descr">Splash screen image</string>
 </resources>

@@ -1,7 +1,7 @@
 package com.example.filmster.data.mappers
 
 import com.example.filmster.data.remote.pojo.FilmPojo
-import com.example.filmster.model.FilmInfo
+import com.example.filmster.domain.model.FilmInfo
 import com.example.filmster.utils.Mapper
 
 class MapFilmPojoToFilmInfo : Mapper<FilmPojo, FilmInfo> {
@@ -16,7 +16,7 @@ class MapFilmPojoToFilmInfo : Mapper<FilmPojo, FilmInfo> {
             mpaa_rating = from.mpaa_rating,
             multimedia = from.multimedia.src,
             publication_date = from.publication_date,
-            summary_short=from.summary_short
+            summary_short = from.summary_short
         )
     }
 }

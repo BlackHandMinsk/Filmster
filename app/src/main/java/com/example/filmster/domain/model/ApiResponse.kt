@@ -1,9 +1,6 @@
-package com.example.filmster.model
+package com.example.filmster.domain.model
 
 import android.os.Parcelable
-import com.example.filmster.data.remote.pojo.FilmPojo
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
